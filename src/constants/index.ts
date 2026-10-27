@@ -9,3 +9,7 @@ export const REMINDER_NOTIFICATION_PAYLOAD = 'payload:reminder-notification';
 
 export const WORKR_SIGNUP_NOTIFICATION_QUEUE = 'workr-signup-notification-queue';
 export const WORKR_SIGNUP_NOTIFICATION_PAYLOAD = 'payload:workr-signup-notification';
+
+export const USER_CREDENTIALS_NOTIFICATION_QUEUE ='user-credentials-notification-queue';
+
+export const USER_CREDENTIALS_NOTIFICATION_PAYLOAD ='send-user-credentials-email';

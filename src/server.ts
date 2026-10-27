@@ -7,6 +7,7 @@ import { attachCorrelationIdMiddleware } from './middlewares/correlation.middlew
 import { appErrorHandler, genericErrorHandler } from './middlewares/error.middleware';
 import { setupReminderNotificationProcessor } from './processors/reminderNotification.processor';
 import { setupTransactionalNotificationProcessor } from './processors/transactionalNotification.processor';
+import { setupUserCredentialsNotificationProcessor } from './processors/userCredentialsNotification.processor';
 import { setupWorkrSignupNotificationProcessor } from './processors/workrSignupNotification.processor';
 import apiRouter from './routes';
 
@@ -29,5 +30,6 @@ app.listen(serverConfig.PORT, () => {
     setupTransactionalNotificationProcessor();
     setupReminderNotificationProcessor();
     setupWorkrSignupNotificationProcessor();
+    setupUserCredentialsNotificationProcessor();
     logger.info('Transactional notification processor setup completed');
 });

@@ -50,6 +50,19 @@ class NotificationRepository implements INotificationRepository {
             });
         }
 
+        // WorkR and other external-reference notifications.
+    if (data.externalRef != null) {
+        return await prisma.notification.findFirst({
+            where: {
+                externalRef: data.externalRef,
+                notificationType: data.notificationType,
+                reminderNumber: data.reminderNumber ?? 0,
+            },
+        });
+    }
+
+ 
+
         if(data.notificationType == NotificationType.WORKR_SIGNUP_DAY0) {
             if(data.externalRef == null) {
                 return null;
